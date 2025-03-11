@@ -12,14 +12,19 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
+    // Determine the API URL based on the environment
+    const apiUrl = process.env.NODE_ENV === "production"
+      ? "https://your-backend-url.vercel.app/send-email" // Change to your production API URL
+      : "http://localhost:5000/send-email"; // Local development URL
+
     try {
-      const response = await fetch("http://localhost:5000/send-email", {
+      const response = await fetch(apiUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-  
+
       const data = await response.json();
       setStatus(data.message);
     } catch (error) {
@@ -27,55 +32,52 @@ function Contact() {
       setStatus("Failed to send message.");
     }
   };
-  
-  
-  
 
   return (
-   <div>
-     <div style={styles.container}>
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        style={styles.formContainer}
-      >
-        <h2 style={styles.title}>Contact Me</h2>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-            style={styles.input}
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            style={styles.input}
-          />
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            rows="4"
-            value={formData.message}
-            onChange={handleChange}
-            required
-            style={styles.textarea}
-          ></textarea>
-          <button type="submit" style={styles.button}>Send Message</button>
-        </form>
-        {status && <p style={styles.status}>{status}</p>}
-      </motion.div>
+    <div>
+      <div style={styles.container}>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          style={styles.formContainer}
+        >
+          <h2 style={styles.title}>Contact Me</h2>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              style={styles.input}
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              style={styles.input}
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="4"
+              value={formData.message}
+              onChange={handleChange}
+              required
+              style={styles.textarea}
+            ></textarea>
+            <button type="submit" style={styles.button}>Send Message</button>
+          </form>
+          {status && <p style={styles.status}>{status}</p>}
+        </motion.div>
+      </div>
+      <Footer />
     </div>
-    <Footer/>
-   </div>
   );
 }
 

@@ -7,10 +7,8 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-
 app.use(express.json());
 app.use(cors()); 
-
 
 const transporter = nodemailer.createTransport({
   service: "gmail",
@@ -19,7 +17,6 @@ const transporter = nodemailer.createTransport({
     pass: process.env.EMAIL_PASS, 
   },
 });
-
 
 app.post("/send-email", async (req, res) => {
   const { name, email, message } = req.body;
@@ -40,8 +37,6 @@ app.post("/send-email", async (req, res) => {
   }
 });
 
-
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
-  console.log(process.env.EMAIL_USER, process.env.EMAIL_PASS)
 });

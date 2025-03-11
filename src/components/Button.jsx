@@ -4,7 +4,7 @@ import { FaEnvelope } from "react-icons/fa";
 const Button = () => {
   return (
     <a
-      href="http://localhost:5174/#/Contact" 
+      href="http://localhost:5173/#/contact" 
       className="fixed bottom-6 right-6 bg-red-500 text-white p-4 rounded-full shadow-lg hover:bg-red-600 transition duration-300 flex items-center space-x-2"
     >
       <FaEnvelope className="text-xl" />
