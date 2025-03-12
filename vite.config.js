@@ -7,5 +7,9 @@ export default defineConfig({
     tailwindcss(),
     react()
    ],
-   base: process.env.NODE_ENV === 'production' ? '/Khomotso-Sekhaolelo/' : '/',
+   base: '/',
+   server: {
+    port: 5173,
+    open: true,
+  },
 });
