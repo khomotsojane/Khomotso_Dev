@@ -31,9 +31,9 @@ const Footer = () => {
    
         <div className="flex space-x-6 mt-4">
           <a href="http://localhost:5173/#" className="hover:text-red-400 transition">Home</a>
-          <a href="http://localhost:5173/#/Aboutme" className="hover:text-red-400 transition">About</a>
-          <a href="http://localhost:5173/#/Projects" className="hover:text-red-400 transition">Projects</a>
-          <a href="http://localhost:5173/#/Skills" className="hover:text-red-400 transition">Skills</a>
+          <a href="http://localhost:5173/#/aboutme" className="hover:text-red-400 transition">About</a>
+          <a href="http://localhost:5173/#/projects" className="hover:text-red-400 transition">Projects</a>
+          <a href="http://localhost:5173/#/skills" className="hover:text-red-400 transition">Skills</a>
         </div>
 
       
