@@ -7,9 +7,17 @@ export default defineConfig({
     tailwindcss(),
     react()
    ],
-   base: '/', 
+   base: process.env.NODE_ENV === 'production' ? '/' : '/',
+   build: {
+    outDir: "dist", 
+    emptyOutDir: true,
+  },
    server: {
     port: 5173,
-    open: true,
+    strictPort: true,
+    hmr: {
+      protocol: 'ws',
+      port: 5173
+    }
   },
 });
