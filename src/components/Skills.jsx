@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "./Header";
 import Footer from "./Footer";
 import { motion } from "framer-motion";
 
@@ -28,6 +29,7 @@ const skills = [
 const Skills = () => {
   return (
     <div>
+    <Header/>
       <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center p-10">
       <h2 className="text-5xl font-bold mb-10 text-blue-400">My Skills</h2>
       <div className="flex flex-wrap justify-center gap-10">

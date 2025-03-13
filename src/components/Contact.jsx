@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Header from "./Header";
 import Footer from "./Footer";
 import { motion } from "framer-motion";
 
@@ -35,6 +36,7 @@ function Contact() {
 
   return (
     <div>
+    <Header/>
       <div style={styles.container}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
