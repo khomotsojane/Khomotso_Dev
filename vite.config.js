@@ -7,7 +7,7 @@ export default defineConfig({
     tailwindcss(),
     react()
    ],
-   base: process.env.VITE_BASE_PATH || "/",
+   base: process.env.VITE_BASE_PATH || "/Khomotso_Dev",
    build: {
     outDir: "dist", 
   },
