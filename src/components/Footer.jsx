@@ -1,5 +1,6 @@
 import React from "react";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import FAvideo from "../assets/16548256-hd_1080_1920_30fps.mp4"
+import { FaLinkedin } from "react-icons/fa";
 
 const videoBgStyle = {
     position: "absolute",
@@ -16,7 +17,7 @@ const Footer = () => {
     <footer className="relative h-[400px] text-white">
    
       <video autoPlay loop muted playsInline style={videoBgStyle}>
-          <source src="/16548256-hd_1080_1920_30fps.mp4" type="video/mp4" />
+          <source src={FAvideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
@@ -30,10 +31,10 @@ const Footer = () => {
 
    
         <div className="flex space-x-6 mt-4">
-          <a href="http://localhost:5173/#" className="hover:text-red-400 transition">Home</a>
-          <a href="http://localhost:5173/#/aboutme" className="hover:text-red-400 transition">About</a>
-          <a href="http://localhost:5173/#/projects" className="hover:text-red-400 transition">Projects</a>
-          <a href="http://localhost:5173/#/skills" className="hover:text-red-400 transition">Skills</a>
+          <a href="#/" className="hover:text-red-400 transition">Home</a>
+          <a href="#/aboutme" className="hover:text-red-400 transition">About</a>
+          <a href="#/projects" className="hover:text-red-400 transition">Projects</a>
+          <a href="#/skills" className="hover:text-red-400 transition">Skills</a>
         </div>
 
       

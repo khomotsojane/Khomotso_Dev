@@ -3,10 +3,8 @@ import Spline from "@splinetool/react-spline";
 import d4 from "../assets/d4.jpg"
 import d3 from "../assets/d3.jpg"
 import d2 from "../assets/d2.jpg"
-import { motion } from "framer-motion";
-import Skills from "./Skills";
+import FAvideo from "../assets/16548256-hd_1080_1920_30fps.mp4"
 import AboutMe from "./Aboutme";
-import Contact from "./Contact";
 import Projects from "./Projects";
 import Button from "./Button";
 import Header from "./Header";
@@ -38,32 +36,7 @@ function Home() {
     zIndex: "-1",
   };
 
-  const navbarStyle = {
-    position: "absolute",
-    top: "20px",
-    left: "20px",
-    display: "flex",
-    gap: "15px",
-    marginTop: "50px",
-    paddingLeft: "10%",
-  };
 
-  const linkStyle = {
-    color: "white",
-    textDecoration: "none",
-    fontSize: "25px",
-    padding: "5px 10px",
-    transition: "all 0.3s ease",
-  };
-
-  const waveStyle = {
-    position: "absolute",
-    bottom: 0,
-    left: 0,
-    background: "linear-gradient(50deg, #000000,rgb(48, 4, 4))",
-    width: "100%",
-    zIndex: "-1",
-  };
 
   const textContainerStyle = {
     display: "flex",
@@ -140,27 +113,6 @@ function Home() {
     textAlign: "center",
     color: "#fff",
   };
-  const sectionStyle2 = {
-    height: "100vh",
-    width: "100vw",
-    background: "linear-gradient(50deg, #000000, rgb(48, 4, 4))",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    textAlign: "center",
-    padding: "5%",
-    color: "#fff",
-  };
-
-  const blobContainer = {
-    display: "flex",
-    justifyContent: "center",
-    flexWrap: "wrap",
-    gap: "30px",
-    maxWidth: "1200px",
-    width: "100%",
-  };
 
 
 
@@ -208,7 +160,7 @@ function Home() {
     
       <div style={containerStyle}>
         <video autoPlay loop muted playsInline style={videoBgStyle}>
-          <source src="/16548256-hd_1080_1920_30fps.mp4" type="video/mp4" />
+          <source src={FAvideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 

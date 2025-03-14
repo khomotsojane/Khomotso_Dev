@@ -9,17 +9,23 @@ const Header = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      {/* Logo / Title */}
-      <h1 className="text-2xl font-bold cursor-pointer">
+     <h1 className="text-2xl font-bold text-white">
         <a href="/">My Portfolio</a>
       </h1>
 
-      {/* Navigation Links */}
-      <ul className="flex space-x-6">
-        <li><a href="/#" className="text-lg hover:text-yellow-400 transition duration-300">Home</a></li>
-        <li><a href="http://localhost:5173/#/aboutme" className="text-lg hover:text-yellow-400 transition duration-300">About</a></li>
-        <li><a href="http://localhost:5173/#/projects" className="text-lg hover:text-yellow-400 transition duration-300">Projects</a></li>
-        <li><a href="http://localhost:5173/#/skills" className="text-lg hover:text-yellow-400 transition duration-300">Skills</a></li>
+      <ul className="flex space-x-6 text-lg text-gray-300">
+        <li>
+          <a href="#/" className="hover:text-blue-400 transition">Home</a>
+        </li>
+        <li>
+          <a href="#/aboutme" className="hover:text-blue-400 transition">About</a>
+        </li>
+        <li>
+          <a href="#/projects" className="hover:text-blue-400 transition">Projects</a>
+        </li>
+        <li>
+          <a href="#/skills" className="hover:text-blue-400 transition">Skills</a>
+        </li>
       </ul>
     </motion.nav>
   );
