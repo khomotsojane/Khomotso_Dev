@@ -14,10 +14,10 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Determine the API URL based on the environment
+  
     const apiUrl = process.env.NODE_ENV === "production"
-      ? "https://your-backend-url.vercel.app/send-email" // Change to your production API URL
-      : "http://localhost:5000/send-email"; // Local development URL
+      ? "https://your-backend-url.vercel.app/send-email" 
+      : "http://localhost:5000/send-email"; 
 
     try {
       const response = await fetch(apiUrl, {
