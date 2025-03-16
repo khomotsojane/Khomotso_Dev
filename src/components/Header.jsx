@@ -26,6 +26,9 @@ const Header = () => {
         <li>
           <a href="#/skills" className="hover:text-blue-400 transition">Skills</a>
         </li>
+        <li>
+          <a href="https://drive.google.com/file/d/1iJJgkeJ7cGxXjmTm7HIo7a877kXb7S3P/view?usp=sharing/" className="hover:text-blue-400 transition">Resume</a>
+        </li>
       </ul>
     </motion.nav>
   );

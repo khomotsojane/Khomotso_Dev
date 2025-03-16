@@ -35,6 +35,7 @@ const Footer = () => {
           <a href="#/aboutme" className="hover:text-red-400 transition">About</a>
           <a href="#/projects" className="hover:text-red-400 transition">Projects</a>
           <a href="#/skills" className="hover:text-red-400 transition">Skills</a>
+          <a href="https://drive.google.com/file/d/1iJJgkeJ7cGxXjmTm7HIo7a877kXb7S3P/view?usp=sharing/" className="hover:text-red-400 transition">Resume</a>
         </div>
 
       

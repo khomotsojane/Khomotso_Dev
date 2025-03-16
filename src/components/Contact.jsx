@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Header from "./Header";
 import Footer from "./Footer";
+import Header from "./Header";
 import { motion } from "framer-motion";
 
 function Contact() {
@@ -13,14 +13,10 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-  
-    const apiUrl = process.env.NODE_ENV === "production"
-      ? "https://your-backend-url.vercel.app/send-email" 
-      : "http://localhost:5000/send-email"; 
+    setStatus("Sending...");
 
     try {
-      const response = await fetch(apiUrl, {
+      const response = await fetch("http://localhost:5000/send-email", { 
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -78,7 +74,7 @@ function Contact() {
           {status && <p style={styles.status}>{status}</p>}
         </motion.div>
       </div>
-      <Footer />
+      <Footer/>
     </div>
   );
 }
